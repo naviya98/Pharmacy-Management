@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/customer")
 public class CustomerController {
 
     final CustomerService service;
@@ -39,20 +40,19 @@ public class CustomerController {
 
     @GetMapping("/search-by-name/{name}")
     @ResponseStatus(HttpStatus.FOUND)
-    public List<Customer> searchByName(@PathVariable String name){
+    public List<Customer>searchByName(@PathVariable String name){
         return service.searchByName(name);
     }
 
     @GetMapping("/search-by-nic/{nic}")
     @ResponseStatus(HttpStatus.FOUND)
-    public List<Customer> searchByNic(@PathVariable String nic){
+    public List<Customer>searchByNic(@PathVariable String nic){
         return service.searchByNic(nic);
     }
 
     @GetMapping("/search-by-contact/{contact}")
     @ResponseStatus(HttpStatus.FOUND)
-    public List<Customer> searchByContact(@PathVariable String contact) {
+    public List<Customer>searchByContact(@PathVariable String contact) {
         return service.searchByContact(contact);
     }
-
 }

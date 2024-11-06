@@ -1,7 +1,6 @@
 package edu.icet.crm.service;
 
 import edu.icet.crm.dto.Customer;
-import edu.icet.crm.entity.CustomerEntity;
 import java.util.List;
 
 public interface CustomerService {
